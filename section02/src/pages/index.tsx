@@ -1,3 +1,6 @@
+import styles from "./index.module.css"
+
 export default function Home() {
-  return <h1>인덱스</h1>;
+  console.log(styles);
+  return <h1 className={styles.redText}>인덱스</h1>;
 }
