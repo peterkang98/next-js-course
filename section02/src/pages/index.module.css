@@ -1,5 +1,9 @@
-.redText {
-  color: red;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/*index*/
+.container h3 {
+  margin-bottom: 0;
+}
