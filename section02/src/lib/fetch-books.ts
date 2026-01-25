@@ -1,7 +1,7 @@
 import {BookData} from "@/types";
 
 export default async function fetchBooks(queryParam?: string): Promise<BookData[]> {
-  let url = `http://localhost:12345/book`;
+  let url = `https://onebite-books-server-main-kappa-sepia.vercel.app/book`;
 
   if (queryParam) {
     url += `/search?q=${queryParam}`;
