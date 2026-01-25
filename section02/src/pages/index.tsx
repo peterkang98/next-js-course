@@ -16,7 +16,8 @@ export const getStaticProps = async () => {
     props: {
       allBooks,
       recommendedBooks
-    }
+    },
+    // revalidate: 4,  // 4초마다 정적 페이지 재생성
   }
 };
 
