@@ -18,8 +18,13 @@ export default async function Page({
   params: Promise<{ id: string | string[] }>;
 }) {
   const { id } = await params;
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_SERVER_URL}/book/${id}`);
 
-  const { title, subTitle, description, author, publisher, coverImgUrl } = mockData;
+  if (!response.ok) {
+    return <div>오류가 발생했습니다...</div>
+  }
+
+  const { title, subTitle, description, author, publisher, coverImgUrl } = await response.json();
 
   return (
     <div className={style.container}>
